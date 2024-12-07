@@ -1,4 +1,29 @@
+import { useEffect, useState } from 'react';
+import { ChevronsUp } from 'lucide-react';
+
 const Footer = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const toggleVisibility = () => {
+    if (window.scrollY > 300) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', toggleVisibility);
+    return () => window.removeEventListener('scroll', toggleVisibility);
+  }, []);
+
   return (
     <footer className="bg-white border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -41,6 +66,18 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-gray-100">
           <p className="text-center text-gray-600">&copy; {new Date().getFullYear()} closetIQ. All rights reserved.</p>
         </div>
+        
+        {isVisible && (
+          <div className="fixed bottom-5 right-5">
+            <button
+              type="button"
+              onClick={scrollToTop}
+              className="inline-flex items-center p-3 rounded-full shadow-sm text-white bg-gray-600 hover:bg-gray-700 focus:outline-none"
+            >
+              <ChevronsUp strokeWidth={1} absoluteStrokeWidth />
+            </button>
+          </div>
+        )}
       </div>
     </footer>
   );
