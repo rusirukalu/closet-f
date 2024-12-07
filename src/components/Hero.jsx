@@ -24,16 +24,15 @@ const Hero = () => {
               preferences, and the weather.
             </p>
             <div className="flex gap-4">
+            <Link to="/register" >
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-3 bg-black text-white rounded-md hover:bg-gray-800 transition-colors"
               >
-                
-                <Link to="/register" >
                 Get Started
-                 </Link>
               </motion.button>
+              </Link>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
