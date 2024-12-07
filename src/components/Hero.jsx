@@ -33,6 +33,7 @@ const Hero = () => {
                 Get Started
               </motion.button>
               </Link>
+              <Link to="/wardrobegrid" >
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -40,6 +41,7 @@ const Hero = () => {
               >
                 Learn More
               </motion.button>
+              </Link>
             </div>
           </motion.div>
 
