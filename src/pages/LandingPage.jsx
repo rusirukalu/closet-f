@@ -5,6 +5,8 @@ import HowItWorks from '../components/HowItWorks';
 import Stats from '../components/Stats';
 import Testimonials from '../components/Testimonials';
 import Footer from '../components/Footer';
+import Benefits from '../components/Benefits';
+import CTA from '../components/CTA';
 
 
 const LandingPage = () => {
@@ -14,9 +16,11 @@ const LandingPage = () => {
       <Navbar />
       <Hero />
       <Features />
+      <Benefits />
       <HowItWorks />
       <Stats /> 
       <Testimonials />
+      <CTA />
       <Footer />
     </div>
   );
