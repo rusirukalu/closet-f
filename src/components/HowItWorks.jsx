@@ -50,7 +50,7 @@ const HowItWorks = () => {
               <h3 className="text-xl font-semibold mb-4">{step.title}</h3>
               <p className="text-gray-600">{step.description}</p>
               {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-8 left-[calc(100%-2rem)] w-[calc(100%-4rem)] h-[2px] bg-gray-200" />
+                <div className="hidden md:block absolute top-8 left-[calc(100%-8.5rem)] w-[calc(100%-4rem)] h-[2px] bg-gray-200" />
               )}
             </motion.div>
           ))}
