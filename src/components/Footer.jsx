@@ -73,7 +73,7 @@ const Footer = () => {
               type="button"
               onClick={scrollToTop}
               className="inline-flex items-center p-3 rounded-full shadow-sm text-white bg-gray-600 hover:bg-gray-700 focus:outline-none"
-            >
+            > 
               <ChevronsUp strokeWidth={1} absoluteStrokeWidth />
             </button>
           </div>
