@@ -9,14 +9,14 @@ const NavBar = () => {
 
     return (
         <nav className="bg-white p-4 shadow-md fixed top-0 w-full z-50">
-            <div className="container mx-`auto flex justify-between items-center">
+            <div className="container mx-auto flex justify-between items-center">
                 {/* Logo - now a Link */}
                 <motion.div
                     variants={itemVariants}
                     whileHover="hover"
                     whileTap="tap"
                     transition={{ type: 'spring', stiffness: 300, damping: 10 }}    
-                    className='ml-4'                
+                    className='ml-10'                
                 >                    
                     <Link to="/" className="text-2xl font-bold">
                         closetIQ
@@ -24,13 +24,14 @@ const NavBar = () => {
                 </motion.div>                
 
                 {/* Navigation Links */}
-                <ul className="flex space-x-4">
+                <ul className="flex space-x-6 mr-10">
                     <AnimatePresence>
                         <motion.li
                             variants={itemVariants}
                             whileHover="hover"
                             whileTap="tap"
                             transition={{ type: 'spring', stiffness: 300, damping: 10 }}
+                            className=''
                         >
                             <Link to="/" className="text-gray-800 hover:text-blue-500">
                                 Home
@@ -61,8 +62,6 @@ const NavBar = () => {
                             </Link>
                         </motion.li>
                     </AnimatePresence>
-                    {/* Other links can remain as they are, or be adjusted similarly */}
-                    {/* ... your existing code for About, Features, Contact ... */} 
 
                     {/* Login/Register Buttons */}
                     <motion.li
@@ -70,7 +69,6 @@ const NavBar = () => {
                         whileHover="hover"
                         whileTap="tap"
                         transition={{ type: 'spring', stiffness: 300, damping: 10 }}
-                        className="ml-4" 
                     >   
                         <Link 
                             to="/login" 
